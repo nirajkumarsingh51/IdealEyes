@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCA & ADCA Course - Ideal Eyes</title>
+    <title>IT & Software Developer Courses - Ideal Eyes</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -63,103 +63,32 @@
             margin: 30px 0;
         }
         
-        .course-overview {
+        .programming-languages {
             padding: 80px 0;
             background: #f8f9fa;
         }
         
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-        
-        .overview-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .overview-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .overview-card h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: #333;
-            text-align: center;
-        }
-        
-        .overview-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        
-        .overview-item h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-        
-        .overview-item p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .overview-item ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-        
-        .overview-item li {
-            padding: 5px 0;
-            color: #666;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .overview-item li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .practical-training {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .training-grid {
+        .languages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .training-item {
-            background: #f8f9fa;
+        .language-card {
+            background: white;
             padding: 40px 30px;
             border-radius: 15px;
-            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            text-align: center;
         }
         
-        .training-item:hover {
-            transform: translateY(-5px);
+        .language-card:hover {
+            transform: translateY(-10px);
         }
         
-        .training-icon {
+        .language-icon {
             width: 80px;
             height: 80px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -172,73 +101,152 @@
             font-size: 2rem;
         }
         
-        .training-item h3 {
-            font-size: 1.3rem;
+        .language-card h3 {
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 15px;
             color: #333;
         }
         
-        .training-item p {
+        .language-card p {
             color: #666;
             line-height: 1.6;
         }
         
-        .career-prospects {
+        .career-support {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: white;
         }
         
-        .prospects-grid {
+        .support-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .prospect-card {
+        .support-item {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .support-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .support-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .support-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .support-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .learning-formats {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .formats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .format-card {
             background: white;
             padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border-left: 4px solid #667eea;
         }
         
-        .prospect-card:hover {
+        .format-card:hover {
+            transform: translateX(10px);
+        }
+        
+        .format-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .format-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .learning-options {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .option-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .option-card:hover {
             transform: translateY(-5px);
         }
         
-        .prospect-card h3 {
+        .option-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
             font-size: 1.5rem;
+        }
+        
+        .option-card h3 {
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #333;
-            text-align: center;
         }
         
-        .prospect-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .prospect-card li {
-            padding: 8px 0;
+        .option-card p {
             color: #666;
-            position: relative;
-            padding-left: 25px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .prospect-card li:last-child {
-            border-bottom: none;
-        }
-        
-        .prospect-card li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
         
         .cta-section {
@@ -305,10 +313,6 @@
                 font-size: 1rem;
             }
             
-            .overview-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .cta-section h2 {
                 font-size: 2rem;
             }
@@ -369,126 +373,133 @@
     <section class="course-hero">
         <div class="container">
             <div class="course-hero-content">
-                <h1>Master DCA and ADCA Courses in Patna</h1>
-                <h2>DCA and ADCA Courses in Patna</h2>
-                <p>Explore Diploma in Computer Applications (DCA) and Advanced Diploma in Computer Applications (ADCA) courses in Patna. These programs offer foundational and advanced computer skills designed for students looking to build a strong IT career. Start your journey to becoming proficient in computer applications with reputed institutes in Patna offering expert training and practical knowledge.</p>
+                <h1>Best Advance IT & Software Developer Courses in Patna</h1>
+                <h2>Advance Your Career with Our IT & Software Developer Courses</h2>
+                <p>Prepare for a thriving tech career with our comprehensive IT and software development courses. Designed for beginners and advancing professionals, our programs combine practical skills with real-world projects. Gain expertise in coding, system management, and application development. Start building your future today!</p>
                 <div class="course-image">
-                    <i class="fas fa-laptop"></i>
+                    <i class="fas fa-code"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Course Overview -->
-    <section class="course-overview">
+    <!-- Programming Languages -->
+    <section class="programming-languages">
         <div class="container">
-            <h2 class="section-title">Course Overview</h2>
-            <div class="overview-grid">
-                <div class="overview-card">
-                    <h3>DCA Course Overview</h3>
-                    <div class="overview-item">
-                        <h4>Course Duration</h4>
-                        <p>Typically 6 to 12 months, depending on the institute.</p>
+            <h2 class="section-title">Core Programming Languages You'll Master</h2>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <div class="language-icon">
+                        <i class="fab fa-js-square"></i>
                     </div>
-                    <div class="overview-item">
-                        <h4>Course Overview</h4>
-                        <ul>
-                            <li>Basics of Computers and MS Office</li>
-                            <li>Internet and Email Usage</li>
-                            <li>Programming Basics (C, C++)</li>
-                            <li>Database Management and Tally ERP</li>
-                        </ul>
-                    </div>
-                    <div class="overview-item">
-                        <h4>Career Opportunities</h4>
-                        <p>Jobs as computer operators, data entry professionals, office administrators, and IT assistants.</p>
-                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Build dynamic web applications and interactive front-end interfaces.</p>
                 </div>
-                <div class="overview-card">
-                    <h3>ADCA Course Overview</h3>
-                    <div class="overview-item">
-                        <h4>Duration</h4>
-                        <p>Usually 1 year, offering a deeper dive into computer applications.</p>
+                <div class="language-card">
+                    <div class="language-icon">
+                        <i class="fab fa-python"></i>
                     </div>
-                    <div class="overview-item">
-                        <h4>Advanced Topics</h4>
-                        <ul>
-                            <li>Advance of Computers and MS Office</li>
-                            <li>Advance Internet and Email Usage</li>
-                            <li>Advance Programming Basics (C, C++)</li>
-                            <li>Database Management and Tally ERP</li>
-                        </ul>
+                    <h3>Python</h3>
+                    <p>Use Python for data analysis, AI, and backend development.</p>
+                </div>
+                <div class="language-card">
+                    <div class="language-icon">
+                        <i class="fab fa-java"></i>
                     </div>
-                    <div class="overview-item">
-                        <h4>Career Growth</h4>
-                        <p>Qualifies you for higher roles such as software assistant, network administrator, and programmer.</p>
+                    <h3>Java</h3>
+                    <p>Develop scalable enterprise and Android applications with Java.</p>
+                </div>
+                <div class="language-card">
+                    <div class="language-icon">
+                        <i class="fas fa-hashtag"></i>
                     </div>
+                    <h3>C#</h3>
+                    <p>Create desktop and game applications using Microsoft's C# language.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Practical Training -->
-    <section class="practical-training">
+    <!-- Career Support -->
+    <section class="career-support">
         <div class="container">
-            <h2 class="section-title">Practical Training and Certification</h2>
-            <div class="training-grid">
-                <div class="training-item">
-                    <div class="training-icon">
-                        <i class="fas fa-hands-on"></i>
+            <h2 class="section-title">Career Support & Job Placement Assistance</h2>
+            <div class="support-grid">
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-file-alt"></i>
                     </div>
-                    <h3>Hands-on Practice</h3>
-                    <p>Laboratory sessions on software like MS Office, Tally, Web Development.</p>
+                    <h3>Resume & Interview Prep</h3>
+                    <p>Get personalized coaching to showcase your skills.</p>
                 </div>
-                <div class="training-item">
-                    <div class="training-icon">
-                        <i class="fas fa-project-diagram"></i>
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3>Project Work</h3>
-                    <p>Complete real-world projects to gain practical exposure and problem-solving skills.</p>
+                    <h3>Networking Opportunities</h3>
+                    <p>Connect with tech companies during career fairs and events.</p>
                 </div>
-                <div class="training-item">
-                    <div class="training-icon">
-                        <i class="fas fa-certificate"></i>
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>Certification</h3>
-                    <p>Certificate awarded on successful completion, recognized by local industry employers.</p>
+                    <h3>Internship & Job Placement</h3>
+                    <p>Access exclusive listings and placement support in tech roles.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Career Prospects -->
-    <section class="career-prospects">
+    <!-- Learning Formats -->
+    <section class="learning-formats">
         <div class="container">
-            <h2 class="section-title">Career Prospects and Job Support!</h2>
-            <div class="prospects-grid">
-                <div class="prospect-card">
-                    <h3>Job Roles</h3>
-                    <ul>
-                        <li>Data Entry Operators</li>
-                        <li>Computer operator</li>
-                        <li>Office Assistant</li>
-                        <li>Software Support Executive</li>
-                    </ul>
+            <h2 class="section-title">Flexible Learning Formats to Suit You</h2>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <h3>Web App Development</h3>
+                    <p>Design and build responsive websites from scratch.</p>
                 </div>
-                <div class="prospect-card">
-                    <h3>Placement Support</h3>
-                    <ul>
-                        <li>Many Institute offer placement assistant</li>
-                        <li>Resume building</li>
-                        <li>Interview preparation</li>
-                        <li>Career counseling</li>
-                    </ul>
+                <div class="format-card">
+                    <h3>Mobile App Creation</h3>
+                    <p>Develop native and cross-platform mobile applications.</p>
                 </div>
-                <div class="prospect-card">
-                    <h3>Further Studies</h3>
-                    <ul>
-                        <li>Graduates can pursue higher education</li>
-                        <li>Computer science fields</li>
-                        <li>IT-related fields</li>
-                        <li>Advanced certifications</li>
-                    </ul>
+                <div class="format-card">
+                    <h3>Database Management</h3>
+                    <p>Learn to design and manage databases effectively.</p>
+                </div>
+                <div class="format-card">
+                    <h3>Cloud Integration</h3>
+                    <p>Deploy applications using leading cloud platforms like AWS and Azure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Options -->
+    <section class="learning-options">
+        <div class="container">
+            <h2 class="section-title">Flexible Learning Options!</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Self-Paced Learning</h3>
+                    <p>Access course materials anytime to learn at your own convenience without schedule conflicts.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Live Instructor Sessions</h3>
+                    <p>Participate in scheduled virtual classes offering real-time interaction and Q&A.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Join an active forum for networking, peer support, and expert advice.</p>
                 </div>
             </div>
         </div>
@@ -497,8 +508,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Start Your IT Career?</h2>
-            <p>Join our DCA and ADCA courses and build a strong foundation in computer applications</p>
+            <h2>Ready to Build Your Tech Career?</h2>
+            <p>Join our comprehensive IT and software development courses and start building your future in technology</p>
             <div class="cta-buttons">
                 <a href="../index.html#contact" class="course-enroll-btn">Enroll Now</a>
                 <a href="tel:+917759810531" class="cta-btn secondary">Call Us</a>

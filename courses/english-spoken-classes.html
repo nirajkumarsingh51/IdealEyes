@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCA & ADCA Course - Ideal Eyes</title>
+    <title>English Spoken Classes - Ideal Eyes</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -50,116 +50,32 @@
             margin-right: auto;
         }
         
-        .course-image {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-            margin: 30px 0;
-        }
-        
-        .course-overview {
+        .course-features {
             padding: 80px 0;
             background: #f8f9fa;
         }
         
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-        
-        .overview-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .overview-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .overview-card h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: #333;
-            text-align: center;
-        }
-        
-        .overview-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-        
-        .overview-item h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-        
-        .overview-item p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .overview-item ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-        
-        .overview-item li {
-            padding: 5px 0;
-            color: #666;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .overview-item li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .practical-training {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .training-grid {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .training-item {
-            background: #f8f9fa;
+        .feature-item {
+            background: white;
             padding: 40px 30px;
             border-radius: 15px;
             text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
         
-        .training-item:hover {
+        .feature-item:hover {
             transform: translateY(-5px);
         }
         
-        .training-icon {
+        .feature-icon {
             width: 80px;
             height: 80px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -172,73 +88,131 @@
             font-size: 2rem;
         }
         
-        .training-item h3 {
+        .feature-item h3 {
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 15px;
             color: #333;
         }
         
-        .training-item p {
+        .feature-item p {
             color: #666;
             line-height: 1.6;
         }
         
-        .career-prospects {
+        .curriculum-section {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: white;
         }
         
-        .prospects-grid {
+        .curriculum-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .prospect-card {
-            background: white;
+        .curriculum-card {
+            background: #f8f9fa;
             padding: 40px 30px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
             transition: transform 0.3s ease;
         }
         
-        .prospect-card:hover {
-            transform: translateY(-5px);
+        .curriculum-card:hover {
+            transform: translateX(10px);
         }
         
-        .prospect-card h3 {
+        .curriculum-card h3 {
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 20px;
             color: #333;
-            text-align: center;
         }
         
-        .prospect-card ul {
+        .curriculum-card ul {
             list-style: none;
             padding: 0;
         }
         
-        .prospect-card li {
+        .curriculum-card li {
             padding: 8px 0;
             color: #666;
             position: relative;
             padding-left: 25px;
-            border-bottom: 1px solid #eee;
         }
         
-        .prospect-card li:last-child {
-            border-bottom: none;
-        }
-        
-        .prospect-card li::before {
-            content: '→';
+        .curriculum-card li::before {
+            content: '✓';
             position: absolute;
             left: 0;
             color: #667eea;
             font-weight: bold;
+        }
+        
+        .teaching-approach {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .approach-item {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .approach-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .approach-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .approach-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .approach-item p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            margin: 30px 0;
         }
         
         .cta-section {
@@ -305,10 +279,6 @@
                 font-size: 1rem;
             }
             
-            .overview-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .cta-section h2 {
                 font-size: 2rem;
             }
@@ -369,126 +339,133 @@
     <section class="course-hero">
         <div class="container">
             <div class="course-hero-content">
-                <h1>Master DCA and ADCA Courses in Patna</h1>
-                <h2>DCA and ADCA Courses in Patna</h2>
-                <p>Explore Diploma in Computer Applications (DCA) and Advanced Diploma in Computer Applications (ADCA) courses in Patna. These programs offer foundational and advanced computer skills designed for students looking to build a strong IT career. Start your journey to becoming proficient in computer applications with reputed institutes in Patna offering expert training and practical knowledge.</p>
+                <h1>English Spoken Classes in Patna</h1>
+                <p>Boost your confidence and speaking skills with our specialized English Spoken Course designed for Patna learners. Whether a beginner or looking to polish your fluency, join us to speak English effortlessly in daily conversations, interviews, and professional settings.</p>
                 <div class="course-image">
-                    <i class="fas fa-laptop"></i>
+                    <i class="fas fa-comments"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Course Overview -->
-    <section class="course-overview">
+    <!-- Course Features -->
+    <section class="course-features">
         <div class="container">
-            <h2 class="section-title">Course Overview</h2>
-            <div class="overview-grid">
-                <div class="overview-card">
-                    <h3>DCA Course Overview</h3>
-                    <div class="overview-item">
-                        <h4>Course Duration</h4>
-                        <p>Typically 6 to 12 months, depending on the institute.</p>
+            <h2 class="section-title">Course Features Designed for Patna Learners</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="overview-item">
-                        <h4>Course Overview</h4>
-                        <ul>
-                            <li>Basics of Computers and MS Office</li>
-                            <li>Internet and Email Usage</li>
-                            <li>Programming Basics (C, C++)</li>
-                            <li>Database Management and Tally ERP</li>
-                        </ul>
-                    </div>
-                    <div class="overview-item">
-                        <h4>Career Opportunities</h4>
-                        <p>Jobs as computer operators, data entry professionals, office administrators, and IT assistants.</p>
-                    </div>
+                    <h3>Interactive Sessions</h3>
+                    <p>Focus on speaking practice through role plays, discussions, and real-life scenarios.</p>
                 </div>
-                <div class="overview-card">
-                    <h3>ADCA Course Overview</h3>
-                    <div class="overview-item">
-                        <h4>Duration</h4>
-                        <p>Usually 1 year, offering a deeper dive into computer applications.</p>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
                     </div>
-                    <div class="overview-item">
-                        <h4>Advanced Topics</h4>
-                        <ul>
-                            <li>Advance of Computers and MS Office</li>
-                            <li>Advance Internet and Email Usage</li>
-                            <li>Advance Programming Basics (C, C++)</li>
-                            <li>Database Management and Tally ERP</li>
-                        </ul>
+                    <h3>Experienced Trainers</h3>
+                    <p>Qualified instructors with local understanding guide you at every step.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <div class="overview-item">
-                        <h4>Career Growth</h4>
-                        <p>Qualifies you for higher roles such as software assistant, network administrator, and programmer.</p>
+                    <h3>Flexible Timings</h3>
+                    <p>Morning, evening, and weekend batches tailored to your schedule.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
                     </div>
+                    <h3>Affordable Fees</h3>
+                    <p>Quality education within your budget to support learning without stress.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Practical Training -->
-    <section class="practical-training">
+    <!-- Curriculum Section -->
+    <section class="curriculum-section">
         <div class="container">
-            <h2 class="section-title">Practical Training and Certification</h2>
-            <div class="training-grid">
-                <div class="training-item">
-                    <div class="training-icon">
-                        <i class="fas fa-hands-on"></i>
-                    </div>
-                    <h3>Hands-on Practice</h3>
-                    <p>Laboratory sessions on software like MS Office, Tally, Web Development.</p>
-                </div>
-                <div class="training-item">
-                    <div class="training-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Project Work</h3>
-                    <p>Complete real-world projects to gain practical exposure and problem-solving skills.</p>
-                </div>
-                <div class="training-item">
-                    <div class="training-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Certification</h3>
-                    <p>Certificate awarded on successful completion, recognized by local industry employers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Career Prospects -->
-    <section class="career-prospects">
-        <div class="container">
-            <h2 class="section-title">Career Prospects and Job Support!</h2>
-            <div class="prospects-grid">
-                <div class="prospect-card">
-                    <h3>Job Roles</h3>
+            <h2 class="section-title">Flexible Course Curriculum</h2>
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <h3>Beginner Level</h3>
                     <ul>
-                        <li>Data Entry Operators</li>
-                        <li>Computer operator</li>
-                        <li>Office Assistant</li>
-                        <li>Software Support Executive</li>
+                        <li>Basic grammar fundamentals</li>
+                        <li>Essential vocabulary building</li>
+                        <li>Pronunciation practice</li>
+                        <li>Simple sentence construction</li>
+                        <li>Basic conversation skills</li>
+                        <li>Introduction to tenses</li>
                     </ul>
                 </div>
-                <div class="prospect-card">
-                    <h3>Placement Support</h3>
+                <div class="curriculum-card">
+                    <h3>Intermediate Level</h3>
                     <ul>
-                        <li>Many Institute offer placement assistant</li>
-                        <li>Resume building</li>
+                        <li>Advanced conversational skills</li>
+                        <li>Fluency development</li>
+                        <li>Confidence building exercises</li>
+                        <li>Practical speaking scenarios</li>
+                        <li>Group discussion practice</li>
+                        <li>Presentation skills</li>
+                    </ul>
+                </div>
+                <div class="curriculum-card">
+                    <h3>Advanced Level</h3>
+                    <ul>
+                        <li>Skill refinement techniques</li>
+                        <li>Public speaking mastery</li>
+                        <li>Professional communication</li>
                         <li>Interview preparation</li>
-                        <li>Career counseling</li>
+                        <li>Business English</li>
+                        <li>Accent neutralization</li>
                     </ul>
                 </div>
-                <div class="prospect-card">
-                    <h3>Further Studies</h3>
-                    <ul>
-                        <li>Graduates can pursue higher education</li>
-                        <li>Computer science fields</li>
-                        <li>IT-related fields</li>
-                        <li>Advanced certifications</li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Approach -->
+    <section class="teaching-approach">
+        <div class="container">
+            <h2 class="section-title">How Our Teaching Approach Works!</h2>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h4>Listening Practice</h4>
+                    <p>Improve understanding through audio clips and conversations.</p>
+                </div>
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h4>Speaking Drills</h4>
+                    <p>Practice dialogues and express ideas fluently in safe settings.</p>
+                </div>
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Grammar & Vocabulary</h4>
+                    <p>Learn rules and word groups essential for accurate communication.</p>
+                </div>
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Group Interaction</h4>
+                    <p>Peer conversations boost confidence and reduce speaking anxiety.</p>
+                </div>
+                <div class="approach-item">
+                    <div class="approach-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Continuous Feedback</h4>
+                    <p>Receive personalized tips to quickly improve your speaking skills.</p>
                 </div>
             </div>
         </div>
@@ -497,8 +474,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Start Your IT Career?</h2>
-            <p>Join our DCA and ADCA courses and build a strong foundation in computer applications</p>
+            <h2>Ready to Speak English Confidently?</h2>
+            <p>Join thousands of students who have transformed their English speaking skills with Ideal Eyes</p>
             <div class="cta-buttons">
                 <a href="../index.html#contact" class="course-enroll-btn">Enroll Now</a>
                 <a href="tel:+917759810531" class="cta-btn secondary">Call Us</a>

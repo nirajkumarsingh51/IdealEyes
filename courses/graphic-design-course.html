@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DCA & ADCA Course - Ideal Eyes</title>
+    <title>Graphic Design Course - Ideal Eyes</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -63,76 +63,41 @@
             margin: 30px 0;
         }
         
-        .course-overview {
+        .curriculum-section {
             padding: 80px 0;
             background: #f8f9fa;
         }
         
-        .overview-grid {
+        .curriculum-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 50px;
         }
         
-        .overview-card {
+        .curriculum-card {
             background: white;
             padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border-top: 4px solid #667eea;
         }
         
-        .overview-card:hover {
+        .curriculum-card:hover {
             transform: translateY(-10px);
         }
         
-        .overview-card h3 {
-            font-size: 1.8rem;
+        .curriculum-card h3 {
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 25px;
-            color: #333;
-            text-align: center;
-        }
-        
-        .overview-item {
             margin-bottom: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
+            color: #333;
         }
         
-        .overview-item h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-        
-        .overview-item p {
+        .curriculum-card p {
             color: #666;
             line-height: 1.6;
-        }
-        
-        .overview-item ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-        
-        .overview-item li {
-            padding: 5px 0;
-            color: #666;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .overview-item li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
         }
         
         .practical-training {
@@ -184,61 +149,91 @@
             line-height: 1.6;
         }
         
-        .career-prospects {
+        .design-labs {
             padding: 80px 0;
             background: #f8f9fa;
         }
         
-        .prospects-grid {
+        .labs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
         
-        .prospect-card {
+        .lab-card {
             background: white;
             padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border-left: 4px solid #667eea;
         }
         
-        .prospect-card:hover {
+        .lab-card:hover {
+            transform: translateX(10px);
+        }
+        
+        .lab-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .lab-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .learning-options {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .option-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .option-card:hover {
             transform: translateY(-5px);
         }
         
-        .prospect-card h3 {
+        .option-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
             font-size: 1.5rem;
+        }
+        
+        .option-card h3 {
+            font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #333;
-            text-align: center;
         }
         
-        .prospect-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .prospect-card li {
-            padding: 8px 0;
+        .option-card p {
             color: #666;
-            position: relative;
-            padding-left: 25px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .prospect-card li:last-child {
-            border-bottom: none;
-        }
-        
-        .prospect-card li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
         
         .cta-section {
@@ -305,10 +300,6 @@
                 font-size: 1rem;
             }
             
-            .overview-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .cta-section h2 {
                 font-size: 2rem;
             }
@@ -369,60 +360,36 @@
     <section class="course-hero">
         <div class="container">
             <div class="course-hero-content">
-                <h1>Master DCA and ADCA Courses in Patna</h1>
-                <h2>DCA and ADCA Courses in Patna</h2>
-                <p>Explore Diploma in Computer Applications (DCA) and Advanced Diploma in Computer Applications (ADCA) courses in Patna. These programs offer foundational and advanced computer skills designed for students looking to build a strong IT career. Start your journey to becoming proficient in computer applications with reputed institutes in Patna offering expert training and practical knowledge.</p>
+                <h1>Best Graphic Design Classes in Patna</h1>
+                <h2>Master Graphic Design: Transform Your Creativity Into a Career</h2>
+                <p>Discover essential graphic design skills and software tools to craft stunning visuals. Our comprehensive course prepares you for success in branding, digital art, and multimedia projects.</p>
                 <div class="course-image">
-                    <i class="fas fa-laptop"></i>
+                    <i class="fas fa-palette"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Course Overview -->
-    <section class="course-overview">
+    <!-- Curriculum Section -->
+    <section class="curriculum-section">
         <div class="container">
-            <h2 class="section-title">Course Overview</h2>
-            <div class="overview-grid">
-                <div class="overview-card">
-                    <h3>DCA Course Overview</h3>
-                    <div class="overview-item">
-                        <h4>Course Duration</h4>
-                        <p>Typically 6 to 12 months, depending on the institute.</p>
-                    </div>
-                    <div class="overview-item">
-                        <h4>Course Overview</h4>
-                        <ul>
-                            <li>Basics of Computers and MS Office</li>
-                            <li>Internet and Email Usage</li>
-                            <li>Programming Basics (C, C++)</li>
-                            <li>Database Management and Tally ERP</li>
-                        </ul>
-                    </div>
-                    <div class="overview-item">
-                        <h4>Career Opportunities</h4>
-                        <p>Jobs as computer operators, data entry professionals, office administrators, and IT assistants.</p>
-                    </div>
+            <h2 class="section-title">Comprehensive Curriculum Covers Key Design Topics</h2>
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <h3>Fundamentals of Design</h3>
+                    <p>Learn principles like balance, contrast, color theory, and composition to build a solid design foundation.</p>
                 </div>
-                <div class="overview-card">
-                    <h3>ADCA Course Overview</h3>
-                    <div class="overview-item">
-                        <h4>Duration</h4>
-                        <p>Usually 1 year, offering a deeper dive into computer applications.</p>
-                    </div>
-                    <div class="overview-item">
-                        <h4>Advanced Topics</h4>
-                        <ul>
-                            <li>Advance of Computers and MS Office</li>
-                            <li>Advance Internet and Email Usage</li>
-                            <li>Advance Programming Basics (C, C++)</li>
-                            <li>Database Management and Tally ERP</li>
-                        </ul>
-                    </div>
-                    <div class="overview-item">
-                        <h4>Career Growth</h4>
-                        <p>Qualifies you for higher roles such as software assistant, network administrator, and programmer.</p>
-                    </div>
+                <div class="curriculum-card">
+                    <h3>Typography & Layout</h3>
+                    <p>Master font selection, hierarchy, and grid layouts for impactful visual communication.</p>
+                </div>
+                <div class="curriculum-card">
+                    <h3>Digital Tools</h3>
+                    <p>Gain proficiency in Adobe Photoshop, Illustrator, and InDesign for professional-level projects.</p>
+                </div>
+                <div class="curriculum-card">
+                    <h3>Branding & Identity</h3>
+                    <p>Create logos and brand assets that resonate with target audiences and stand out competitively.</p>
                 </div>
             </div>
         </div>
@@ -431,64 +398,79 @@
     <!-- Practical Training -->
     <section class="practical-training">
         <div class="container">
-            <h2 class="section-title">Practical Training and Certification</h2>
+            <h2 class="section-title">Hands-On Practical Training</h2>
             <div class="training-grid">
                 <div class="training-item">
                     <div class="training-icon">
-                        <i class="fas fa-hands-on"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h3>Hands-on Practice</h3>
-                    <p>Laboratory sessions on software like MS Office, Tally, Web Development.</p>
+                    <h3>Live Campaigns</h3>
+                    <p>Execute real marketing campaigns with guided support to apply theoretical knowledge.</p>
                 </div>
                 <div class="training-item">
                     <div class="training-icon">
-                        <i class="fas fa-project-diagram"></i>
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Project Work</h3>
-                    <p>Complete real-world projects to gain practical exposure and problem-solving skills.</p>
+                    <h3>Tools Mastery</h3>
+                    <p>Get proficient in tools like Google Analytics, SEMrush, HubSpot, and Mailchimp.</p>
                 </div>
                 <div class="training-item">
                     <div class="training-icon">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3>Certification</h3>
-                    <p>Certificate awarded on successful completion, recognized by local industry employers.</p>
+                    <h3>Performance Tracking</h3>
+                    <p>Learn to analyze and report performance metrics for continuous campaign optimization.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Career Prospects -->
-    <section class="career-prospects">
+    <!-- Design Labs -->
+    <section class="design-labs">
         <div class="container">
-            <h2 class="section-title">Career Prospects and Job Support!</h2>
-            <div class="prospects-grid">
-                <div class="prospect-card">
-                    <h3>Job Roles</h3>
-                    <ul>
-                        <li>Data Entry Operators</li>
-                        <li>Computer operator</li>
-                        <li>Office Assistant</li>
-                        <li>Software Support Executive</li>
-                    </ul>
+            <h2 class="section-title">State-of-the-Art Design Labs and Software Access</h2>
+            <div class="labs-grid">
+                <div class="lab-card">
+                    <h3>Latest Design Software</h3>
+                    <p>Access Adobe Creative Cloud and other industry-standard tools.</p>
                 </div>
-                <div class="prospect-card">
-                    <h3>Placement Support</h3>
-                    <ul>
-                        <li>Many Institute offer placement assistant</li>
-                        <li>Resume building</li>
-                        <li>Interview preparation</li>
-                        <li>Career counseling</li>
-                    </ul>
+                <div class="lab-card">
+                    <h3>Collaborative Workstations</h3>
+                    <p>Use well-equipped labs designed for teamwork and innovation.</p>
                 </div>
-                <div class="prospect-card">
-                    <h3>Further Studies</h3>
-                    <ul>
-                        <li>Graduates can pursue higher education</li>
-                        <li>Computer science fields</li>
-                        <li>IT-related fields</li>
-                        <li>Advanced certifications</li>
-                    </ul>
+                <div class="lab-card">
+                    <h3>Cloud Storage</h3>
+                    <p>Store and share projects securely anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Options -->
+    <section class="learning-options">
+        <div class="container">
+            <h2 class="section-title">Flexible Learning Options!</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Self-Paced Learning</h3>
+                    <p>Access course materials anytime to learn at your own convenience without schedule conflicts.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Live Instructor Sessions</h3>
+                    <p>Participate in scheduled virtual classes offering real-time interaction and Q&A.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Support</h3>
+                    <p>Join an active forum for networking, peer support, and expert advice.</p>
                 </div>
             </div>
         </div>
@@ -497,8 +479,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Start Your IT Career?</h2>
-            <p>Join our DCA and ADCA courses and build a strong foundation in computer applications</p>
+            <h2>Ready to Create Stunning Designs?</h2>
+            <p>Join our comprehensive graphic design course and transform your creativity into a successful career</p>
             <div class="cta-buttons">
                 <a href="../index.html#contact" class="course-enroll-btn">Enroll Now</a>
                 <a href="tel:+917759810531" class="cta-btn secondary">Call Us</a>
