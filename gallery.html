@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ideal Eyes Educational Institute</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gallery-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+        
+        .gallery-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .gallery-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .gallery-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .gallery-content {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 12px 25px;
+            border: 2px solid #667eea;
+            background: transparent;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-image::before {
+            opacity: 1;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .gallery-info {
+            padding: 20px;
+        }
+        
+        .gallery-info h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .gallery-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .gallery-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .gallery-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .events-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .event-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .event-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .event-content {
+            padding: 25px;
+        }
+        
+        .event-date {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .event-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .event-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-hero p {
+                font-size: 1rem;
+            }
+            
+            .gallery-filters {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +91 7759-810-531</span>
+                    <span><i class="fas fa-clock"></i> Mon-Sat 8:00 - 7:00PM</span>
+                    <span><i class="fas fa-envelope"></i> idealeyesindia@gmail.com</span>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Ideal Eyes Logo" style="height: 50px;">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#courses">Our Courses <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="courses/english-spoken-classes.html">English Spoken Classes</a></li>
+                            <li><a href="courses/digital-marketing-course.html">Digital Marketing Course</a></li>
+                            <li><a href="courses/dca-adca-course.html">DCA & ADCA Course</a></li>
+                            <li><a href="courses/it-software-developer-courses.html">IT & Software Developer Courses</a></li>
+                            <li><a href="courses/graphic-design-course.html">Graphic Design Course</a></li>
+                            <li><a href="courses/safety-management-course.html">Safety Management Course</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">About us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button class="enquiry-btn">Enquiry now</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <div class="gallery-hero-content">
+                <h1>Our Gallery</h1>
+                <p>Explore our vibrant campus life, student activities, events, and success stories. Get a glimpse into the dynamic learning environment at Ideal Eyes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <section class="gallery-content">
+        <div class="container">
+            <!-- Gallery Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="campus">Campus Life</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="students">Student Activities</button>
+                <button class="filter-btn" data-filter="awards">Awards & Recognition</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="campus">
+                    <div class="gallery-image">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="gallery-overlay">
+                            <h3>Modern Classrooms</h3>
+                            <p>State-of-the-art learning facilities</p>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Modern Classrooms</h3>
+                        <p>Our well-equipped classrooms provide the perfect environment for effective learning and skill development.</p>
+                        <div class="gallery-meta">
+                            <span><i class="fas fa-calendar"></i> March 2024</span>
+                            <span><i class="fas fa-folder"></i> Campus Life</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <i class="fas fa-trophy"></i>
+                        <div class="gallery-overlay">
+                            <h3>Annual Awards Ceremony</h3>
+                            <p>Celebrating student achievements</p>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Annual Awards Ceremony</h3>
+                        <p>Celebrating the achievements of our outstanding students and recognizing their hard work and dedication.</p>
+                        <div class="gallery-meta">
+                            <span><i class="fas fa-calendar"></i> February 2024</span>
+                            <span><i class="fas fa-folder"></i> Events</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="students">
+                    <div class="gallery-image">
+                        <i class="fas fa-users"></i>
+                        <div class="gallery-overlay">
+                            <h3>Group Projects</h3>
+                            <p>Collaborative learning in action</p>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Group Projects</h3>
+                        <p>Students working together on innovative projects, developing teamwork and problem-solving skills.</p>
+                        <div class="gallery-meta">
+                            <span><i class="fas fa-calendar"></i> January 2024</span>
+                            <span><i class="fas fa-folder"></i> Student Activities</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="awards">
+                    <div class="gallery-image">
+                        <i class="fas fa-medal"></i>
+                        <div class="gallery-overlay">
+                            <h3>Excellence Awards</h3>
+                            <p>Recognizing outstanding performance</p>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Excellence Awards</h3>
+                        <p>Our students receiving recognition for their exceptional performance in various courses and competitions.</p>
+                        <div class="gallery-meta">
+                            <span><i class="fas fa-calendar"></i> December 2023</span>
+                            <span><i class="fas fa-folder"></i> Awards & Recognition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="campus">
+                    <div class="gallery-image">
+                        <i class="fas fa-laptop"></i>
+                        <div class="gallery-overlay">
+                            <h3>Computer Labs</h3>
+                            <p>Advanced technology facilities</p>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Computer Labs</h3>
+                        <p>Modern computer laboratories equipped with the latest software and hardware for practical training.</p>
+                        <div class="gallery-meta">
+                            <span><i class="fas fa-calendar"></i> November 2023</span>
+                            <span><i class="fas fa-folder"></i> Campus Life</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <div class="gallery-image">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div class="gallery-overlay">
+                            <h3>Workshop Sessions</h3>
+                            <p>Interactive learning experiences</p>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Workshop Sessions</h3>
+                        <p>Interactive workshops conducted by industry experts to provide hands-on experience and practical knowledge.</p>
+                        <div class="gallery-meta">
+                            <span><i class="fas fa-calendar"></i> October 2023</span>
+                            <span><i class="fas fa-folder"></i> Events</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">March 25, 2024</div>
+                        <h3>Digital Marketing Workshop</h3>
+                        <p>Join our expert-led workshop on the latest digital marketing trends and strategies for 2024.</p>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Main Campus, Patna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">April 5, 2024</div>
+                        <h3>Coding Bootcamp</h3>
+                        <p>Intensive coding bootcamp covering web development, mobile apps, and software engineering.</p>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Computer Lab, Patna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">April 15, 2024</div>
+                        <h3>English Speaking Competition</h3>
+                        <p>Annual English speaking competition to showcase students' communication skills and confidence.</p>
+                        <div class="event-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Auditorium, Patna</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">85,000+</span>
+                    <div class="stat-label">Students Trained</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <div class="stat-label">Events Conducted</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img class="lightbox-image" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ideal Eyes</h3>
+                    <p>Leading English Spoken and Computer Training in India</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Our Courses</a></li>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="index.html#contact">Contact us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Courses</h4>
+                    <ul>
+                        <li><a href="courses/english-spoken-classes.html">English Spoken classes</a></li>
+                        <li><a href="courses/digital-marketing-course.html">Digital marketing course</a></li>
+                        <li><a href="courses/dca-adca-course.html">DCA OR ADCA Course</a></li>
+                        <li><a href="courses/it-software-developer-courses.html">IT Advance Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-map-marker-alt"></i> Pratima Complex, Patna-4</p>
+                        <p><i class="fas fa-phone"></i> +91 7759-810-531</p>
+                        <p><i class="fas fa-envelope"></i> idealeyesindia@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ideal Eyes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Functionality
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = lightbox.querySelector('.lightbox-image');
+            lightboxImage.src = imageSrc;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+        }
+
+        // Close lightbox when clicking outside
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+
+        // Add click event to gallery items
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const image = item.querySelector('.gallery-image');
+                // For demo purposes, we'll use a placeholder
+                openLightbox('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23667eea"/><text x="400" y="300" text-anchor="middle" fill="white" font-size="48">Gallery Image</text></svg>');
+            });
+        });
+    </script>
+</body>
+</html> 
